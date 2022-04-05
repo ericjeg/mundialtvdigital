@@ -1,0 +1,144 @@
+   * {
+       margin: 0;
+       padding: 0;
+   }
+   
+   body {
+       background-image: radial-gradient(circle, #5c0067 0%, #00d4ff 100%);
+       background-size: 20px 20px, 20px 20px;
+       font-family: 'Abril Fatface', cursive;
+       font-family: 'Indie Flower', cursive;
+       font-family: 'Libre Baskerville', serif;
+   }
+   
+   .title h1 {
+       padding: 20px 0;
+       text-align: center;
+       font-size: 2.9em;
+       text-transform: uppercase;
+       color: aliceblue;
+   }
+   
+   .container {
+       background: rgb(129, 129, 127);
+       inline-size: 90%;
+       max-inline-size: 1200px;
+       margin: 1.6em auto;
+       display: grid;
+       gap: 1.6em;
+       grid-template-columns: repeat(5, 1fr);
+   }
+   
+   .container>.header,
+   .container>.content,
+   .container>.sidebar,
+   .container>.footer,
+   .container>div {
+       background: rgb(224, 220, 211);
+       padding: 15px;
+       border: 1px solid black;
+   }
+   
+   .container .header,
+   .container .footer,
+   .container .menu {
+       background: rgb(43, 40, 40);
+       color: rgb(82, 118, 150);
+       grid-column: 1/6
+   }
+   
+   .container .content {
+       grid-column: span 3;
+   }
+   
+   .container .sidebar {
+       grid-column: span 2;
+       background-color: bisque;
+       color: black;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       gap: 1.6em;
+   }
+   
+   .content article {
+       background: rgb(90, 89, 87);
+       padding: 20px;
+       margin-block-start: 5px;
+       color: rgb(244, 250, 244)
+   }
+   
+   .content article h1,
+   .content article p {
+       padding: 10px;
+   }
+   
+   .container .sidebar img {
+       margin: auto;
+   }
+   
+   .container .related-post {
+       background: gray;
+       color: aliceblue;
+       height: 180px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all 0.5s ease;
+   }
+   
+   .container .related-post:hover {
+       cursor: pointer;
+       color: black;
+       background: white;
+   }
+   
+   @media screen and (max-width: 768px) {
+       .header {
+           text-align: center;
+       }
+       .container .content {
+           grid-column: 1/-1;
+       }
+       .container .sidebar {
+           grid-column: 1/6;
+       }
+       .container .related-post {
+           grid-column: 1/-1;
+       }
+   }
+   
+   nav a:hover {
+       color: rgb(232, 238, 243);
+       text-decoration: rgb(71, 70, 68);
+       background-color: #625a64;
+   }
+   
+   .menu ul li a:hover {
+       background-color: rgba(235, 235, 243, 0.555)
+   }
+   
+   .menu {
+       background-color: rgb(141, 138, 141);
+       text-align: center;
+   }
+   
+   .menu li {
+       display: inline-block;
+       margin: 5px;
+       padding: 5px;
+   }
+   
+   .menu ul li a {
+       color: rgb(221, 221, 231);
+       display: block;
+       padding: 10px 15px;
+       text-decoration: none;
+   }
+   
+   nav a {
+       color: white;
+       text-align: center;
+       display: inline;
+   }
