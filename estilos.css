@@ -21,8 +21,8 @@
    
    .container {
        background: rgb(129, 129, 127);
-       inline-size: 90%;
-       max-inline-size: 1200px;
+       inline-size: auto;
+       
        margin: 1.6em auto;
        display: grid;
        gap: 1.6em;
@@ -36,6 +36,7 @@
    .container>div {
        background: rgb(224, 220, 211);
        padding: 15px;
+       
        border: 1px solid black;
    }
    
@@ -53,8 +54,8 @@
    
    .container .sidebar {
        grid-column: span 2;
-       background-color: bisque;
-       color: black;
+       background-color: rgb(73, 71, 73);
+       color: rgb(209, 202, 202);
        display: flex;
        justify-content: center;
        align-items: center;
@@ -142,3 +143,7 @@
        text-align: center;
        display: inline;
    }
+   .content .article-1,
+   .content .article-2,
+   .content .article-3,
+   .content .article-4 { background-image: linear-gradient(blue, red, grey);}
